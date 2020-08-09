@@ -1,0 +1,231 @@
+body {
+  background: rgb(224, 188, 219);
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 25px;
+}
+.header,
+.footer {
+  background-color: rgb(214, 100, 199);
+  margin: 0px auto;
+  width: 1200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.navigation_menu {
+  font-size: 0;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+}
+.navigation_menu li {
+  display: inline-block;
+  background-color: rgb(149, 207, 41);
+  margin-left: 40px;
+  position: relative;
+}
+.navigation_menu li:first-child {
+  margin: 0;
+}
+.header li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.display_menu a,
+.flex_menu a {
+  padding: 16px 20px;
+}
+.navigation_menu .before {
+  padding: 20px 20px 20px 80px;
+  position: relative;
+}
+.navigation_menu .after {
+  padding: 20px 80px 20px 20px;
+  position: relative;
+}
+.before::before {
+  display: inline-block;
+  background: url("../img/css_sprites.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  content: "";
+}
+.item1::before {
+  background-position: -170px -90px;
+}
+.item2::before {
+  background-position: -80px -90px;
+}
+.after::after {
+  display: inline-block;
+  background: url("../img/css_sprites.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+.item3::after {
+  background-position: -10px -10px;
+}
+.float_item::before {
+  background-position: -250px -10px;
+}
+.display_menu li:hover .float_item::before {
+  background-position: -90px -10px;
+}
+.navigation_menu li:hover .item3::after {
+  background-position: -10px -90px;
+}
+.header li:hover {
+  background-color: grey;
+  color: white;
+}
+.display_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0px;
+  display: none;
+}
+.display_menu li {
+  margin: 0;
+  position: relative;
+  display: block;
+}
+.navigation_menu li:hover .display_menu {
+  display: block;
+}
+.float_menu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 0 40px;
+  display: none;
+}
+.float_menu li {
+  margin: 0;
+}
+.display_menu li:hover .float_menu {
+  display: block;
+}
+.content_list {
+  list-style-type: square;
+}
+.content img {
+  border: 3px groove rgb(177, 118, 118);
+  box-shadow: 8px 8px 5px rgb(175, 147, 147);
+  width: 590px;
+  height: 400px;
+}
+span {
+  font-weight: 900;
+  color: rgb(8, 7, 8);
+}
+.content p,
+.main p {
+  text-indent: 25px;
+}
+blockquote {
+  margin: 10px;
+}
+.content a:link {
+  color: yellow;
+  font-style: italic;
+}
+.content a:visited {
+  color: blueviolet;
+}
+.content a:hover {
+  color: white;
+}
+.content a:active {
+  color: violet;
+}
+.gallery {
+  font-size: 20px;
+  line-height: 30px;
+  width: 1200px;
+  margin: 0 auto 10px;
+}
+.main {
+  text-align: center;
+}
+.main > p {
+  text-align: justify;
+}
+.navigation_2 {
+  background-color: rgb(214, 100, 199);
+  line-height: 40px;
+  width: 300px;
+  height: 250px;
+  position: fixed;
+  left: 0;
+  bottom: 50%;
+  margin-bottom: -125px;
+}
+.navigation_2 a {
+  display: block;
+}
+.navigation_2 a:hover {
+  background-color: white;
+}
+.signature {
+  display: none;
+  position: absolute;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  left: 0;
+  right: 0;
+  background-color: rgba(204, 164, 214, 0.5);
+}
+.img_wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+.img_wrapper:hover .signature {
+  display: initial;
+}
+.footer_navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+.footer_navigation a {
+  display: block;
+  background-image: url("../img/css_sprites.png");
+  background-position: -10px -170px;
+  height: 70px;
+  width: 70px;
+  text-decoration: none;
+}
+.footer_navigation li + li a {
+  background-position: -90px -170px;
+}
+.footer_navigation li + li + li a {
+  background-position: -250px -90px;
+}
+.footer_navigation li + li + li + li a {
+  background-position: -170px -10px;
+}
+.footer_navigation li + li + li + li + li a {
+  background-position: -250px -170px;
+}
+.footer_navigation li + li + li + li + li + li a {
+  background-position: -170px -170px;
+}
