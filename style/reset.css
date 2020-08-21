@@ -127,3 +127,6 @@ table {
   clear: both;
   display: block;
 }
+label {
+  cursor: pointer;
+}

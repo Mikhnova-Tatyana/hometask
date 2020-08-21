@@ -248,54 +248,33 @@ blockquote {
 }
 .socials_wrapper {
   position: fixed;
-  display: flex;
+  box-sizing: border-box;
   height: 300px;
-  width: 100px;
+  width: 50px;
   right: 0;
   top: 50%;
-  margin-top: -150px;
+  transform: translateY(-50%);
   background: lightskyblue;
   border: 2px solid mediumorchid;
-  font-size: 0;
   transition: all 2s ease-in-out;
+  padding: 60px 30px 30px 100px;
 }
 .socials_wrapper:hover {
   background-color: rgb(28, 173, 28);
-  width: 400px;
-}
-.button_wrapper {
-  position: relative;
-  height: 300px;
-  flex: 0 0 100px;
-  right: 0;
-  top: 50%;
-  margin-top: -150px;
+  width: 350px;
 }
 .button {
   position: absolute;
-  display: block;
   left: 0;
-  top: 0;
-  height: 100%;
-  width: 100px;
-  border-right: 2px solid mediumorchid;
-}
-.button p {
-  position: absolute;
-  bottom: 50%;
-  left: -25px;
-  right: -25px;
-  font-size: 30px;
+  bottom: 0;
+  width: 300px;
+  height: 30px;
+  transform-origin: 27px 27px;
   transform: rotate(-90deg);
-}
-.socials {
-  position: relative;
-  flex: 0 0 250px;
+  border-bottom: 2px solid mediumorchid;
 }
 .socials_icons {
-  position: absolute;
-  left: 50px;
-  top: 25%;
+  width: 180px;
   display: flex;
   flex-wrap: wrap;
   transform: rotate(45deg);
