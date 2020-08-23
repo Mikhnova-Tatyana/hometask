@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
+@font-face {
+  font-family: "marck_scriptregular";
+  src: url("../fonts/marckscript/marckscript-regular-webfont.eot");
+  src: url("../fonts/marckscript/marckscript-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/marckscript/marckscript-regular-webfont.woff2")
+      format("woff2"),
+    url("../fonts/marckscript/marckscript-regular-webfont.woff") format("woff"),
+    url("../fonts/marckscript/marckscript-regular-webfont.ttf")
+      format("truetype"),
+    url("../fonts/marckscript/marckscript-regular-webfont.svg#marck_scriptregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IndieFlower-Regular";
+  src: url("../fonts/indie_flower/IndieFlower-Regular.eot");
+  src: url("../fonts/indie_flower/IndieFlower-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/indie_flower/IndieFlower-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IndieFlower";
+  src: url("../fonts/indie_flower/IndieFlower.svg#IndieFlower") format("svg"),
+    url("../fonts/indie_flower/IndieFlower.ttf") format("truetype"),
+    url("../fonts/indie_flower/IndieFlower.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: rgb(224, 188, 219);
   box-sizing: border-box;
@@ -34,6 +67,10 @@ body {
 }
 .navigation_menu li:first-child {
   margin: 0;
+}
+.navigation_menu > li {
+  font-family: "Caveat", cursive;
+  font-weight: bold;
 }
 .header li a {
   display: block;
@@ -120,6 +157,7 @@ body {
   color: yellow;
   text-transform: lowercase;
   transition: color 2s ease-in, text-transform 2s linear 1s;
+  font-family: "IndieFlower";
 }
 .display_menu li a:hover {
   color: white;
@@ -135,6 +173,9 @@ body {
   margin: 0;
   transition: all 2s cubic-bezier(0.42, 0, 0.58, 1);
   transform: scale(0, 1) rotate(3turn);
+}
+.float_menu li a {
+  font-family: "marck_scriptregular";
 }
 .display_menu li:hover .float_menu li {
   transform: scale(1, 1);
@@ -250,18 +291,18 @@ blockquote {
   position: fixed;
   box-sizing: border-box;
   height: 300px;
-  width: 50px;
+  width: 30px;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   background: lightskyblue;
   border: 2px solid mediumorchid;
   transition: all 2s ease-in-out;
-  padding: 60px 30px 30px 100px;
+  padding: 60px 30px 30px 30px;
 }
 .socials_wrapper:hover {
   background-color: rgb(28, 173, 28);
-  width: 350px;
+  width: 400px;
 }
 .button {
   position: absolute;
@@ -271,9 +312,9 @@ blockquote {
   height: 30px;
   transform-origin: 27px 27px;
   transform: rotate(-90deg);
-  border-bottom: 2px solid mediumorchid;
 }
 .socials_icons {
+  padding: 0 140px;
   width: 180px;
   display: flex;
   flex-wrap: wrap;
